@@ -263,7 +263,7 @@
             // Opsional: Ubah Tampilan Teks Nomor di Halaman
             const displayNumbers = document.querySelectorAll('.help-contact-display');
             // Format tampilan agar enak dibaca (misal: +62 8xx-xxxx-xxxx)
-            const formattedNum = "+" + supportNumber.substring(0,2) + " " + supportNumber.substring(2,5) + "-" + supportNumber.substring(5,9) + "-" + supportNumber.substring(9);
+            const formattedNum = "0" + supportNumber.substring(2, 5) + "-" + supportNumber.substring(5, 9) + "-" + supportNumber.substring(9);
             displayNumbers.forEach(span => {
                 span.innerText = formattedNum;
             });
