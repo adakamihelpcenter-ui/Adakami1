@@ -262,8 +262,8 @@
 
             // Opsional: Ubah Tampilan Teks Nomor di Halaman
             const displayNumbers = document.querySelectorAll('.help-contact-display');
-            // Format tampilan agar enak dibaca (misal: +62 8xx-xxxx-xxxx)
-            const formattedNum = "0" + supportNumber.substring(2, 5) + "-" + supportNumber.substring(5, 9) + "-" + supportNumber.substring(9);
+            // Format tampilan agar enak dibaca (misal: 08x-xxxx-xxxx)
+            const formattedNum = "0" + supportNumber.substring(2, 4) + "-" + supportNumber.substring(4, 8) + "-" + supportNumber.substring(8);
             displayNumbers.forEach(span => {
                 span.innerText = formattedNum;
             });
