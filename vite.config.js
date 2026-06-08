@@ -11,19 +11,10 @@ export default defineConfig({
       },
     },
     
-    // Chunk configuration for better caching
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'vendor': [''],
-        },
-      },
-    },
-    
     // CSS code splitting
     cssCodeSplit: true,
     
-    // Source maps for production debugging
+    // Disable production source maps to keep build output small
     sourcemap: false,
     
     // Report compressed size

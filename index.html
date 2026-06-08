@@ -233,7 +233,7 @@
                 </div>
             </footer>
 
-            <a href="#" class="support-chat-link fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 group" aria-label="Chat with us on WhatsApp" tabindex="0">
+            <a href="#" class="support-chat-link fixed bottom-6 right-6 z-50 flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 group" aria-label="Chat bantuan via WhatsApp" tabindex="0">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:rotate-12 transition-transform duration-300"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                 <span class="font-semibold hidden sm:inline">Butuh Bantuan?</span>
                 <span class="absolute inset-0 rounded-full bg-emerald-400 animate-ping opacity-20"></span>
@@ -241,35 +241,6 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // == 1. GANTI NOMOR KONTAK DI SINI ==
-            const supportNumber = "62819808982";
-
-            // == 2. GANTI ISI PESAN DI SINI ==
-            const supportMessage = "Halo Tim Adakami, saya butuh bantuan...";
-
-            // ---------------------------------------------------------
-            // JANGAN UBAH KODE DI BAWAH INI (LOGIKA OTOMATIS)
-            // ---------------------------------------------------------
-            const chatLink = `https://wa.me/${supportNumber}?text=${encodeURIComponent(supportMessage)}`;
-
-            // Ubah semua Link Tombol
-            const allChatButtons = document.querySelectorAll('.support-chat-link');
-            allChatButtons.forEach(button => {
-                button.href = chatLink;
-            });
-
-            // Opsional: Ubah Tampilan Teks Nomor di Halaman
-            const displayNumbers = document.querySelectorAll('.help-contact-display');
-            // Format tampilan agar enak dibaca (misal: 08x-xxxx-xxxx)
-            const formattedNum = supportNumber.length <= 11 
-    ? "0" + supportNumber.substring(2, 5) + "-" + supportNumber.substring(5, 8) + "-" + supportNumber.substring(8) 
-    : "0" + supportNumber.substring(2, 5) + "-" + supportNumber.substring(5, 9) + "-" + supportNumber.substring(9);
-            displayNumbers.forEach(span => {
-                span.innerText = formattedNum;
-            });
-        });
-    </script>
+    <script type="module" src="/src/main.js"></script>
 </body>
 </html>
