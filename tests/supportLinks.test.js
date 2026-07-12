@@ -8,16 +8,16 @@ import {
 } from '../src/supportLinks.js'
 
 test('createSupportChatLink encodes the support message', () => {
-  const link = createSupportChatLink('628197960177', 'Halo, butuh bantuan & info')
+  const link = createSupportChatLink('6281234567890', 'Halo, butuh bantuan & info')
 
   assert.equal(
     link,
-    'https://wa.me/628197960177?text=Halo%2C%20butuh%20bantuan%20%26%20info',
+    'https://wa.me/6281234567890?text=Halo%2C%20butuh%20bantuan%20%26%20info',
   )
 })
 
 test('formatPhoneNumber formats Indonesian support numbers consistently', () => {
-  assert.equal(formatPhoneNumber('628123456789'), '0812-3456-789')
+  assert.equal(formatPhoneNumber('62819808982'), '0819-808-982')
   assert.equal(formatPhoneNumber('+62 812-3456-7890'), '0812-3456-7890')
   assert.equal(formatPhoneNumber('081234567890'), '0812-3456-7890')
 })
@@ -42,11 +42,11 @@ test('initializeSupportLinks updates chat links and visible contact numbers', ()
 
   initializeSupportLinks({
     documentRef,
-    supportNumber: '628197960177',
+    supportNumber: '6281234567890',
     supportMessage: 'Saya perlu bantuan',
   })
 
-  assert.equal(chatButton.href, 'https://wa.me/628197960177?text=Saya%20perlu%20bantuan')
+  assert.equal(chatButton.href, 'https://wa.me/6281234567890?text=Saya%20perlu%20bantuan')
   assert.equal(footerButton.href, chatButton.href)
-  assert.equal(visibleNumber.textContent, '0819-7960-177')
+  assert.equal(visibleNumber.textContent, '0812-3456-7890')
 })
