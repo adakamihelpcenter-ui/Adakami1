@@ -1,4 +1,4 @@
-export const DEFAULT_SUPPORT_NUMBER = '62192140072'
+export const DEFAULT_SUPPORT_NUMBER = '08192140072'
 export const DEFAULT_SUPPORT_MESSAGE = 'Halo Tim Adakami, saya butuh bantuan...'
 
 export function createSupportChatLink(
