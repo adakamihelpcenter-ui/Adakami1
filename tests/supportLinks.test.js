@@ -8,11 +8,11 @@ import {
 } from '../src/supportLinks.js'
 
 test('createSupportChatLink encodes the support message', () => {
-  const link = createSupportChatLink('6281234567890', 'Halo, butuh bantuan & info')
+  const link = createSupportChatLink('628197960177', 'Halo, butuh bantuan & info')
 
   assert.equal(
     link,
-    'https://wa.me/6281234567890?text=Halo%2C%20butuh%20bantuan%20%26%20info',
+    'https://wa.me/628197960177?text=Halo%2C%20butuh%20bantuan%20%26%20info',
   )
 })
 
